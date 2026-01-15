@@ -6,6 +6,7 @@ interface ApplicationCardProps {
   description: string;
   features: string[];
   architectureLink: string;
+  architectureButtonText?: string;
   applicationLink: string;
   launchButtonText: string;
   theme: 'cyan' | 'purple' | 'green';
@@ -18,6 +19,7 @@ const ApplicationCard = ({
   description,
   features,
   architectureLink,
+  architectureButtonText = 'View Architecture',
   applicationLink,
   launchButtonText,
   theme,
@@ -60,7 +62,7 @@ const ApplicationCard = ({
 
   return (
     <div
-      className={`group glass-card rounded-2xl p-8 border-2 ${classes.border} transition-all duration-500 hover:translate-y-[-8px] ${classes.glow} relative overflow-hidden`}
+      className={`group glass-card rounded-2xl p-8 border-2 ${classes.border} transition-all duration-500 hover:translate-y-[-8px] ${classes.glow} relative overflow-hidden h-full flex flex-col`}
     >
       {/* Decorative Corner */}
       <div className={`absolute top-0 right-0 w-32 h-32 ${classes.iconBg} rounded-bl-full opacity-50 transition-opacity group-hover:opacity-80`} />
@@ -96,7 +98,7 @@ const ApplicationCard = ({
       </ul>
       
       {/* Buttons */}
-      <div className="flex flex-col sm:flex-row gap-3">
+      <div className="flex flex-col sm:flex-row gap-3 mt-auto">
         <a
           href={architectureLink}
           target="_blank"
@@ -104,7 +106,7 @@ const ApplicationCard = ({
           className={`flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg font-medium text-sm ${classes.outlineBtn}`}
         >
           <FileText className="w-4 h-4" />
-          View Architecture
+          {architectureButtonText}
         </a>
         <a
           href={applicationLink}

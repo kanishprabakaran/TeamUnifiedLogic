@@ -17,7 +17,7 @@ const ApplicationsSection = () => {
       ],
       architectureLink: LINKS.blockchain.architecture,
       applicationLink: LINKS.blockchain.application,
-      launchButtonText: 'Launch Application',
+      launchButtonText: 'Under Development',
       theme: 'cyan' as const,
       icon: Link2,
     },
@@ -34,7 +34,7 @@ const ApplicationsSection = () => {
       ],
       architectureLink: LINKS.fleet.architecture,
       applicationLink: LINKS.fleet.application,
-      launchButtonText: 'Launch Dashboard',
+      launchButtonText: 'Under Development',
       theme: 'purple' as const,
       icon: Brain,
     },
@@ -50,8 +50,9 @@ const ApplicationsSection = () => {
         'Efficiency Rating: 10.8km/kWh',
       ],
       architectureLink: LINKS.ev.architecture,
+      architectureButtonText: 'Architecture Under Development',
       applicationLink: LINKS.ev.application,
-      launchButtonText: 'Launch Planner',
+      launchButtonText: 'Under Development',
       theme: 'green' as const,
       icon: MapPin,
     },
@@ -83,7 +84,7 @@ const ApplicationsSection = () => {
           {applications.map((app, index) => (
             <div
               key={index}
-              className="animate-fade-in-up opacity-0"
+              className="animate-fade-in-up opacity-0 h-full"
               style={{ animationDelay: `${0.1 + index * 0.15}s` }}
             >
               <ApplicationCard {...app} />

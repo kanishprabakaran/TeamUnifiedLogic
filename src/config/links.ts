@@ -6,11 +6,11 @@
 
 export const LINKS = {
   blockchain: {
-    architecture: "#architecture-blockchain", // TO BE REPLACED with actual architecture doc URL
+    architecture: "https://automotive-blockchain-security.onrender.com",
     application: "#app-blockchain",           // TO BE REPLACED with actual app URL
   },
   fleet: {
-    architecture: "#architecture-fleet",      // TO BE REPLACED with actual architecture doc URL
+    architecture: "https://ai-powered-fleet-intelligence.onrender.com",
     application: "#app-fleet",                // TO BE REPLACED with actual app URL
   },
   ev: {

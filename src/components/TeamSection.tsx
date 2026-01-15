@@ -4,22 +4,18 @@ const TeamSection = () => {
   const teamMembers = [
     {
       name: 'Kanish Prabakaran',
-      role: 'Blockchain Developer',
       color: 'cyan',
     },
     {
       name: 'Harsha Guntreddi',
-      role: 'ML Engineer',
       color: 'purple',
     },
     {
       name: 'Ganga Ramesh',
-      role: 'Full-Stack Developer',
       color: 'green',
     },
     {
       name: 'Sathish E',
-      role: 'IoT Specialist',
       color: 'gold',
     },
   ];
@@ -84,11 +80,6 @@ const TeamSection = () => {
                 <h3 className="font-orbitron text-lg font-semibold text-foreground mb-1">
                   {member.name}
                 </h3>
-                
-                {/* Role */}
-                <p className={`text-sm font-medium ${colors.text}`}>
-                  {member.role}
-                </p>
               </div>
             );
           })}
