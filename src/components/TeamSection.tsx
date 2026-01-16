@@ -1,22 +1,30 @@
 import { User } from 'lucide-react';
+import kanishPhoto from '@/config/Photos/Kanish Prabakaran.jpg';
+import harshaPhoto from '@/config/Photos/Harsha Guntreddi.jpg';
+import gangaPhoto from '@/config/Photos/Ganga Ramesh.jpg';
+import sathishPhoto from '@/config/Photos/Sathish E.png';
 
 const TeamSection = () => {
   const teamMembers = [
     {
       name: 'Kanish Prabakaran',
       color: 'cyan',
+      photo: kanishPhoto,
     },
     {
       name: 'Harsha Guntreddi',
       color: 'purple',
+      photo: harshaPhoto,
     },
     {
       name: 'Ganga Ramesh',
       color: 'green',
+      photo: gangaPhoto,
     },
     {
       name: 'Sathish E',
       color: 'gold',
+      photo: sathishPhoto,
     },
   ];
 
@@ -63,23 +71,34 @@ const TeamSection = () => {
         </div>
         
         {/* Team Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {teamMembers.map((member, index) => {
             const colors = colorClasses[member.color];
             return (
               <div
                 key={index}
-                className={`group team-card glass-card rounded-2xl p-6 text-center border ${colors.border} ${colors.glow} transition-all duration-300`}
+                className={`group team-card glass-card rounded-2xl p-6 text-center border ${colors.border} ${colors.glow} transition-all duration-300 flex flex-col items-center`}
               >
                 {/* Avatar */}
-                <div className={`w-24 h-24 mx-auto mb-4 rounded-full ${colors.bg} border-2 ${colors.border} flex items-center justify-center overflow-hidden transition-all duration-300`}>
-                  <User className={`w-12 h-12 ${colors.text}`} />
+                <div className={`w-52 h-52 mx-auto mb-4 rounded-full ${colors.bg} border-2 ${colors.border} flex items-center justify-center overflow-hidden transition-all duration-300`}>
+                  {member.photo ? (
+                    <img
+                      src={member.photo}
+                      alt={member.name}
+                      className="h-full w-full object-cover object-center"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <User className={`w-12 h-12 ${colors.text}`} />
+                  )}
                 </div>
                 
                 {/* Name */}
-                <h3 className="font-orbitron text-lg font-semibold text-foreground mb-1">
-                  {member.name}
-                </h3>
+                <div className="min-h-[3.5rem] flex items-center justify-center">
+                  <h3 className="font-orbitron text-lg font-semibold text-foreground mb-1">
+                    {member.name}
+                  </h3>
+                </div>
               </div>
             );
           })}
