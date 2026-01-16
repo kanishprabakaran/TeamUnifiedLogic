@@ -43,8 +43,6 @@ const Footer = () => {
                 <a
                   key={index}
                   href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="flex items-center gap-2 text-sm text-muted-foreground hover:text-cyan transition-colors"
                 >
                   <link.icon className="w-4 h-4" />

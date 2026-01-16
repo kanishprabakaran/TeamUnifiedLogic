@@ -101,8 +101,6 @@ const ApplicationCard = ({
       <div className="flex flex-col sm:flex-row gap-3 mt-auto">
         <a
           href={architectureLink}
-          target="_blank"
-          rel="noopener noreferrer"
           className={`flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg font-medium text-sm ${classes.outlineBtn}`}
         >
           <FileText className="w-4 h-4" />
@@ -110,8 +108,6 @@ const ApplicationCard = ({
         </a>
         <a
           href={applicationLink}
-          target="_blank"
-          rel="noopener noreferrer"
           className={`flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg font-medium text-sm ${classes.solidBtn}`}
         >
           <ExternalLink className="w-4 h-4" />

@@ -9,7 +9,6 @@ const HeroSection = () => {
       {/* Decorative Elements */}
       <div className="absolute bottom-32 right-20 w-48 h-48 border border-purple/20 rounded-full animate-spin-slow opacity-20" style={{ animationDirection: 'reverse' }} />
       <div className="absolute top-1/3 right-1/4 w-2 h-2 bg-cyan rounded-full animate-glow-pulse" />
-      <div className="absolute bottom-1/3 left-1/4 w-2 h-2 bg-green rounded-full animate-glow-pulse" style={{ animationDelay: '1s' }} />
       
       {/* Main Content */}
       <div className="relative z-10 container mx-auto px-6 text-center">
