@@ -13,10 +13,6 @@ export const LINKS = {
     architecture: "https://ai-powered-fleet-intelligence.onrender.com",
     application: "#app-fleet",                // TO BE REPLACED with actual app URL
   },
-  ev: {
-    architecture: "#architecture-ev",         // TO BE REPLACED with actual architecture doc URL
-    application: "#app-ev",                   // TO BE REPLACED with actual app URL
-  },
 } as const;
 
 // Team member photos - replace with actual photo URLs

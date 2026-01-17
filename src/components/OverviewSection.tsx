@@ -42,7 +42,7 @@ const OverviewSection = () => {
               <h3 className="font-orbitron text-xl md:text-2xl font-semibold text-green mb-4">Impact</h3>
               <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
                 Enhanced fleet management, improved driver safety through real-time coaching, and optimized 
-                EV infrastructure planning. Our solution processes over 1.2 million transactions with 99.99% 
+                operational planning. Our solution processes over 1.2 million transactions with 99.99% 
                 uptime and 12ms latency on AWS cloud infrastructure.
               </p>
             </div>

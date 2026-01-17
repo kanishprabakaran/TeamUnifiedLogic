@@ -1,4 +1,4 @@
-import { Link2, Brain, MapPin } from 'lucide-react';
+import { Link2, Brain } from 'lucide-react';
 import ApplicationCard from './ApplicationCard';
 import { LINKS } from '@/config/links';
 
@@ -38,24 +38,6 @@ const ApplicationsSection = () => {
       theme: 'purple' as const,
       icon: Brain,
     },
-    {
-      title: 'EV Route Planner',
-      subtitle: 'Optimized Route Planning for Tata EVs',
-      description: 'Intelligent route optimization for Tata Nexon EV Max with real-time charging station visualization and range calculation across the Indian charging network.',
-      features: [
-        'Tata Nexon EV Max Integration (437km Range)',
-        'Dynamic Battery Percentage Slider',
-        'Pan-India Charging Station Network',
-        'Fast Charge: 50kW | Battery: 40.5kWh',
-        'Efficiency Rating: 10.8km/kWh',
-      ],
-      architectureLink: LINKS.ev.architecture,
-      architectureButtonText: 'Architecture Under Development',
-      applicationLink: LINKS.ev.application,
-      launchButtonText: 'Under Development',
-      theme: 'green' as const,
-      icon: MapPin,
-    },
   ];
 
   return (
@@ -67,7 +49,7 @@ const ApplicationsSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <span className="inline-block px-4 py-1 mb-4 text-sm font-mono text-cyan border border-cyan/30 rounded-full bg-cyan/5">
-            Three Integrated Solutions
+            Two Integrated Solutions
           </span>
           <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-4">
             <span className="text-foreground">Our </span>
@@ -80,7 +62,7 @@ const ApplicationsSection = () => {
         </div>
         
         {/* Applications Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
           {applications.map((app, index) => (
             <div
               key={index}

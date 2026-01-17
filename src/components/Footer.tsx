@@ -1,4 +1,4 @@
-import { Shield, Link2, Brain, MapPin } from 'lucide-react';
+import { Shield, Link2, Brain } from 'lucide-react';
 import { LINKS } from '@/config/links';
 
 const Footer = () => {
@@ -7,8 +7,6 @@ const Footer = () => {
     { label: 'Blockchain App', href: LINKS.blockchain.application, icon: Link2 },
     { label: 'Fleet Architecture', href: LINKS.fleet.architecture, icon: Brain },
     { label: 'Fleet Dashboard', href: LINKS.fleet.application, icon: Brain },
-    { label: 'EV Architecture', href: LINKS.ev.architecture, icon: MapPin },
-    { label: 'EV Planner', href: LINKS.ev.application, icon: MapPin },
   ];
 
   return (
