@@ -7,8 +7,8 @@ interface ApplicationCardProps {
   features: string[];
   architectureLink: string;
   architectureButtonText?: string;
-  applicationLink: string;
-  launchButtonText: string;
+  applicationLink?: string;
+  launchButtonText?: string;
   theme: 'cyan' | 'purple' | 'green';
   icon: LucideIcon;
 }
@@ -59,6 +59,7 @@ const ApplicationCard = ({
   };
 
   const classes = themeClasses[theme];
+  const showLaunchButton = Boolean(applicationLink && launchButtonText);
 
   return (
     <div
@@ -98,7 +99,7 @@ const ApplicationCard = ({
       </ul>
       
       {/* Buttons */}
-      <div className="flex flex-col sm:flex-row gap-3 mt-auto">
+      <div className={`flex flex-col gap-3 mt-auto ${showLaunchButton ? 'sm:flex-row' : ''}`}>
         <a
           href={architectureLink}
           className={`flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg font-medium text-sm ${classes.outlineBtn}`}
@@ -106,13 +107,15 @@ const ApplicationCard = ({
           <FileText className="w-4 h-4" />
           {architectureButtonText}
         </a>
-        <a
-          href={applicationLink}
-          className={`flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg font-medium text-sm ${classes.solidBtn}`}
-        >
-          <ExternalLink className="w-4 h-4" />
-          {launchButtonText}
-        </a>
+        {showLaunchButton ? (
+          <a
+            href={applicationLink}
+            className={`flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg font-medium text-sm ${classes.solidBtn}`}
+          >
+            <ExternalLink className="w-4 h-4" />
+            {launchButtonText}
+          </a>
+        ) : null}
       </div>
     </div>
   );
