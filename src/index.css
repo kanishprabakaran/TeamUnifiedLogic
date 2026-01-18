@@ -341,8 +341,24 @@
   }
 
   .tech-badge:hover {
-    border-color: hsl(var(--cyan));
-    box-shadow: 0 0 15px hsl(var(--cyan) / 0.2);
+    border-color: hsl(var(--tech-accent, var(--cyan)));
+    box-shadow: 0 0 15px hsl(var(--tech-accent, var(--cyan)) / 0.2);
+  }
+
+  .tech-badge-cyan {
+    --tech-accent: var(--cyan);
+  }
+
+  .tech-badge-purple {
+    --tech-accent: var(--purple);
+  }
+
+  .tech-badge-green {
+    --tech-accent: var(--green);
+  }
+
+  .tech-badge-gold {
+    --tech-accent: var(--gold);
   }
 
   /* Scroll Indicator */

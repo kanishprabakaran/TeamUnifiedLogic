@@ -46,6 +46,13 @@ const TechStackSection = () => {
     gold: 'text-gold',
   };
 
+  const badgeAccent: Record<string, string> = {
+    cyan: 'var(--cyan)',
+    purple: 'var(--purple)',
+    green: 'var(--green)',
+    gold: 'var(--gold)',
+  };
+
   return (
     <section className="relative py-24 overflow-hidden bg-card/30">
       <div className="container mx-auto px-6">
@@ -75,7 +82,8 @@ const TechStackSection = () => {
                 {category.technologies.map((tech, techIndex) => (
                   <span
                     key={techIndex}
-                    className="tech-badge"
+                    className={`tech-badge tech-badge-${category.color}`}
+                    style={{ '--tech-accent': badgeAccent[category.color] } as React.CSSProperties}
                   >
                     {tech}
                   </span>
