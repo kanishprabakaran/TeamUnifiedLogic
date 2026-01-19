@@ -102,8 +102,6 @@ const ApplicationCard = ({
       <div className={`flex flex-col gap-3 mt-auto ${showLaunchButton ? 'sm:flex-row' : ''}`}>
         <a
           href={architectureLink}
-          target="_blank"
-          rel="noreferrer"
           className={`flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg font-medium text-sm ${classes.outlineBtn}`}
         >
           <FileText className="w-4 h-4" />
