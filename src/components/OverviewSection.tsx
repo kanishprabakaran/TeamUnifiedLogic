@@ -23,7 +23,7 @@ const OverviewSection = () => {
             <div className="glass-card p-8 md:p-10 rounded-2xl border border-cyan/30 bg-gradient-to-br from-cyan/10 via-transparent to-transparent shadow-[0_25px_60px_-35px_rgba(0,255,255,0.6)]">
               <h3 className="font-orbitron text-xl md:text-2xl font-semibold text-cyan mb-4">Problem Statement</h3>
               <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
-                Modern connected vehicles generate large volumes of data, but legacy IoT and vehicle systems rely on centralized servers and basic security mechanisms. If these systems are compromised, vehicle data can be altered, faked, or misused without detection. This lack of verifiable data integrity creates risks for safety, compliance, and trust across fleet operators and manufacturers.
+                Vehicle records (odometer, service and diagnostics) are easily tampered, enabling resale fraud, warranty abuse and insurance disputes. Maintenance relies on fixed intervals, ignoring driving behaviour that accelerates wear and needs early, personalized alerts. OEMs lack secure fleet benchmarking for real-world fault/anomaly detection, delaying fixes and recalls. OTA updates remain unverifiable, risking malicious code and telemetry/model tampering.
               </p>
             </div>
             

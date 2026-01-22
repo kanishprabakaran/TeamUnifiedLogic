@@ -1,4 +1,4 @@
-import { ChevronDown, Shield, Zap, Lock } from 'lucide-react';
+import { ChevronDown, Shield } from 'lucide-react';
 import ParticleBackground from './ParticleBackground';
 
 const HeroSection = () => {
@@ -40,21 +40,6 @@ const HeroSection = () => {
           From Road to Ledger, Total Data Integrity
         </p>
         
-        {/* Feature Icons */}
-        <div className="flex flex-wrap justify-center gap-8 mb-12 animate-fade-in-up opacity-0" style={{ animationDelay: '0.5s' }}>
-          <div className="flex items-center gap-2 text-cyan">
-            <Lock className="w-5 h-5" />
-            <span className="text-sm font-medium">Military-Grade Security</span>
-          </div>
-          <div className="flex items-center gap-2 text-purple">
-            <Zap className="w-5 h-5" />
-            <span className="text-sm font-medium">Real-Time Processing</span>
-          </div>
-          <div className="flex items-center gap-2 text-green">
-            <Shield className="w-5 h-5" />
-            <span className="text-sm font-medium">99.99% Uptime</span>
-          </div>
-        </div>
         
         {/* CTA Button */}
         <a
